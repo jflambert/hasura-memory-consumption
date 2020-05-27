@@ -1,0 +1,1 @@
+DROP TABLE TABLE wifi_tracking;
