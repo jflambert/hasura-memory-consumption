@@ -13,4 +13,4 @@ Once postgres completes loading the data (CPU usage should go down to 0%), run t
 
 `./query_hasura.sh`
 
-This script requests 1.5 million rows every 5 seconds. You can start multiple instances of the script to accelerate the test. Results show that Hasura will climb to 4GB of RAM consumption while Postgres remains at less than 1GB.
+This script requests 1.5 million rows every 5 seconds. You can start multiple instances of the script to accelerate the test. Results show that Hasura will climb to 4GB of RAM consumption while Postgres mostly remains under 1GB.
