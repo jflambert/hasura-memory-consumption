@@ -1,1 +1,1 @@
-DROP TABLE TABLE wifi_tracking;
+DROP TABLE wifi_tracking;
