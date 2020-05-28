@@ -1,5 +1,5 @@
 # hasura-memory-consumption
-Launch hasura, postgresql and preloaded test data with:
+Launch hasura, postgresql and preload test data with:
 
 `docker-compose up -d`
 
