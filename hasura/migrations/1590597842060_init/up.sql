@@ -29,6 +29,7 @@ CREATE TABLE wifi_tracking
 SELECT create_hypertable('wifi_tracking', 'wt_timestamp');
 
 -- create a year's worth of wifi_tracking data
+-- table size (5.1GB) can be found with `SELECT * FROM hypertable_relation_size_pretty('wifi_tracking');`
 INSERT INTO wifi_tracking (wt_timestamp, wt_mobile, wt_location, wt_mobile_label, wt_location_label)
 SELECT ts, '00:00:00:00:00:01', '00:00:DE:AD:BE:EF', ts::TEXT, ts::TEXT
 FROM generate_series('2019-01-01'::TIMESTAMP, '2020-01-01'::TIMESTAMP, '1 seconds'::INTERVAL) ts;
