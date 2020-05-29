@@ -1,4 +1,6 @@
 # hasura-memory-consumption
+An attempt to characterize [Hasura's memory consumption](https://github.com/hasura/graphql-engine/issues/4077) when providing very large results.
+
 Launch hasura, postgresql and preload test data with:
 
 `docker-compose up -d`
