@@ -28,6 +28,12 @@ CREATE TABLE wifi_tracking
 -- apply timescaledb hypertable to wifi_tracking
 SELECT create_hypertable('wifi_tracking', 'wt_timestamp');
 
+-- enable compression
+ALTER TABLE wifi_tracking SET (
+  timescaledb.compress,
+  timescaledb.compress_segmentby = 'wt_mobile, wt_location'
+);
+
 -- create a year's worth of wifi_tracking data
 -- table size (5.1GB) can be found with `SELECT * FROM hypertable_relation_size_pretty('wifi_tracking');`
 INSERT INTO wifi_tracking (wt_timestamp, wt_mobile, wt_location, wt_mobile_label, wt_location_label)
