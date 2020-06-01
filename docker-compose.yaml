@@ -12,7 +12,7 @@ services:
       POSTGRES_PASSWORD: postgrespassword
       TIMESCALEDB_TELEMETRY: "off"
   graphql-engine:
-    image: hasura/graphql-engine:v1.2.1.cli-migrations-v2
+    image: hasura/graphql-engine:v1.2.2.cli-migrations-v2
     ports:
     - "8080:8080"
     depends_on:
