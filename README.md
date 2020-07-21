@@ -19,4 +19,4 @@ This script requests 1.5 million rows every 5 seconds. You can start multiple in
 
 After 12 hours, cancelling the script(s) will cause Postgres to go back down to ~100MB memory while Hasura remains at ~3GB.
 
-This has been observed with Hasura 1.2.2 and 1.3.0-beta.4
+This has been observed with Hasura 1.2.2 and 1.3.0
