@@ -5,7 +5,7 @@ volumes:
 
 services:
   postgres:
-    image: timescale/timescaledb:latest-pg12
+    image: timescale/timescaledb-postgis:2.3.0-pg13
     ports:
       - "5432:5432"
     restart: always
@@ -30,4 +30,3 @@ services:
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgrespassword@postgres:5432/testdb?application_name=hasura
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
       HASURA_GRAPHQL_ENABLE_TELEMETRY: "false"
-      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
