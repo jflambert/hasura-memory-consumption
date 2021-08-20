@@ -1,0 +1,34 @@
+timescale/timescaledb:latest-pg12
+hasura/graphql-engine:v1.3.3.cli-migrations-v2
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.273159 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.912699 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.622208 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.305731 seconds
+
+timescale/timescaledb-postgis:2.3.0-pg13
+hasura/graphql-engine:v1.3.3.cli-migrations-v2
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.683496 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.980701 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.421594 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.453756 seconds
+
+timescale/timescaledb-ha:pg13.4-ts2.4.0-p0
+hasura/graphql-engine:v1.3.3.cli-migrations-v2
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.478739 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 10.011773 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.660360 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 9.792709 seconds
+
+timescale/timescaledb-ha:pg13.4-ts2.4.0-p0
+hasura/graphql-engine:v2.0.6.cli-migrations-v2
+http://localhost:8080/v1/graphql sent 771000027 bytes in 8.866799 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 8.846738 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 8.896542 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 8.885457 seconds
+
+timescale/timescaledb-ha:pg13.4-ts2.4.1-p0
+hasura/graphql-engine:v2.0.7.cli-migrations-v2
+http://localhost:8080/v1/graphql sent 771000027 bytes in 8.869588 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 8.820663 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 8.883430 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 8.894421 seconds

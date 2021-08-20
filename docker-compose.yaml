@@ -5,7 +5,7 @@ volumes:
 
 services:
   postgres:
-    image: timescale/timescaledb-postgis:2.3.0-pg13
+    image: timescale/timescaledb-ha:pg13.4-ts2.4.1-p0
     ports:
       - "5432:5432"
     restart: always
@@ -17,7 +17,7 @@ services:
       TIMESCALEDB_TELEMETRY: "off"
 
   graphql-engine:
-    image: hasura/graphql-engine:v1.3.3.cli-migrations-v2
+    image: hasura/graphql-engine:v2.0.7.cli-migrations-v2
     ports:
       - "8080:8080"
     depends_on:
@@ -30,3 +30,4 @@ services:
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgrespassword@postgres:5432/testdb?application_name=hasura
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
       HASURA_GRAPHQL_ENABLE_TELEMETRY: "false"
+      HASURA_GRAPHQL_LOG_LEVEL: "warn"
