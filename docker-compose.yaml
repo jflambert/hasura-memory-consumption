@@ -1,11 +1,15 @@
-version: '3.6'
-
-volumes:
-  db_data:
-
 services:
   postgres:
-    image: timescale/timescaledb-ha:pg13.4-ts2.4.1-p0
+    image: timescale/timescaledb-ha:pg13.8-ts2.8-latest
+    command:
+      - -cmin_wal_size=4GB
+      - -cmax_wal_size=16GB
+      - -ccheckpoint_timeout=15min
+      - -cbgwriter_delay=10ms
+      - -cbgwriter_lru_maxpages=100000
+      - -csynchronous_commit=off
+      - -cwal_buffers=64MB
+      - -ctemp_buffers=32MB
     ports:
       - "5432:5432"
     restart: always
@@ -15,9 +19,10 @@ services:
       POSTGRES_DB: testdb
       POSTGRES_PASSWORD: postgrespassword
       TIMESCALEDB_TELEMETRY: "off"
+      TS_TUNE_MAX_BG_WORKERS: 64
 
   graphql-engine:
-    image: hasura/graphql-engine:v2.0.7.cli-migrations-v2
+    image: hasura/graphql-engine:v2.15.2.cli-migrations-v2
     ports:
       - "8080:8080"
     depends_on:
@@ -31,3 +36,6 @@ services:
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
       HASURA_GRAPHQL_ENABLE_TELEMETRY: "false"
       HASURA_GRAPHQL_LOG_LEVEL: "warn"
+
+volumes:
+  db_data:

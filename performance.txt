@@ -32,3 +32,10 @@ http://localhost:8080/v1/graphql sent 771000027 bytes in 8.869588 seconds
 http://localhost:8080/v1/graphql sent 771000027 bytes in 8.820663 seconds
 http://localhost:8080/v1/graphql sent 771000027 bytes in 8.883430 seconds
 http://localhost:8080/v1/graphql sent 771000027 bytes in 8.894421 seconds
+
+timescale/timescaledb-ha:pg13.8-ts2.8-latest
+hasura/graphql-engine:v2.15.2.cli-migrations-v2
+http://localhost:8080/v1/graphql sent 771000027 bytes in 10.809451 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 10.959172 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 11.285604 seconds
+http://localhost:8080/v1/graphql sent 771000027 bytes in 10.903955 seconds
